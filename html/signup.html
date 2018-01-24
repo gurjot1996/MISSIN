@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container" id="body">
+<div class="login-box">
+
+<h2>Signup</h2>
+<div class="signup-box">
+	<form  method="post">
+		<table class="signup-table">
+			<tr>
+					<td>
+					<label>
+						*Username
+					</label>
+					</td>
+					<td>
+						<input type="text" name="username" value={{username}}>
+						<p class="error">{{username_error}}</p>
+					</td> 
+			</tr>
+			<tr>
+					<td>
+					<label>
+						*Password
+					</label>
+					</td>
+					<td>
+						<input type="password" name="password" value={{password}}>
+						<p class="error">{{password_error}}</p> 
+					</td>
+			</tr>
+			<tr>
+					<td>
+					<label>
+						*Verify Password
+					</label>
+					</td>
+					<td>
+						<input type="password" name="verify_password" value={{verify_password}}> 
+						<p class="error">{{verify_error}}</p>	
+					</td>
+			</tr>
+			<tr >
+					<td>
+					<label>
+						*Email
+					</label>
+					</td>
+					<td>
+						<input type="text" name="email" value={{email}}>
+						<p class="error">{{email_error}}</p> 	
+					</td>
+			</tr>
+		</table>
+		<br>
+		<input type="submit" class="btn btn-success" style="width:100%;padding:10px;" value="Submit">
+		<h5 class="existingusersignup">Already a user click <a href="/login">here</a> to login</h5>
+	</form>
+</div>
+</div>
+</div>
+{% endblock %}

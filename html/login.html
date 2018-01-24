@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" id="body">
+<div class="login-box" style="height:40%;">
+
+<h2>Login</h2>
+<div class="signup-box">
+	<form method="post">
+		<table class="signup-table">
+			<tr>
+					<td>
+					<label>
+						Username
+					</label>
+					</td>
+					<td>
+						<input type="text" name="username">
+					</td> 
+			</tr>
+			<tr>
+					<td>
+					<label>
+						Password
+					</label>
+					</td>
+					<td>
+						<input type="password" name="password"> 
+					</td>
+			</tr>
+		</table>
+		<br>
+		<input type="submit" class="btn btn-success" style="width:100%;padding:10px;" value="Submit">
+		<p class="error">{{error}}</p>
+		<h5 class="existingusersignup">New User click <a href="/signup">here</a> to signup</h5>
+	</form>
+</div>
+</div>
+</div>
+{% endblock %}

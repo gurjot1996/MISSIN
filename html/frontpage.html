@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container" id="body">
+	<div >
+  		<img class="mySlides" src="https://www.startablog123.com/wp-content/uploads/2015/12/How-To-Make-Money-Blogging.jpg" style="width:100%;height:450px;">
+ 		 <img class="mySlides" src="https://educationbhaskar.com/wp-content/uploads/2017/03/Career-in-Blogging-Scope-Income.jpg" style="width:100%;height:450px;">
+ 		 <img class="mySlides" src="https://fthmb.tqn.com/Cvjb3NABcKc1yg9kgZ79cI8b3Ac=/2156x1393/filters:fill(auto,1)/blogging-platform-57ad0bc65f9b58b5c243a589.jpg" style="width:100%;height:450px;">
+ 		 <img class="mySlides" src="http://www.howbloggingworks.com/wp-content/uploads/2015/04/how-blogging-works.jpg" style="width:100%;height:450px;">
+
+		  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+ 		 <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<div class="row h-50" id="button-placement">
+			<button type="button" class="btn btn-success" id="front-button-signup" onclick="location.href='/signup'">SignUp</button>
+			<button type="button" class="btn btn-success" id="front-button-login" onclick="location.href='/login'">Login</button>
+ 	</div>
+	<div class="row h-50">
+		<div class="col-md-12">
+			<h4>ABOUT</h4>
+		</div>
+		<div class="col-md-12" id="about-content">
+			<label>
+			Blogging Website
+				<ul>
+					<li>New Users can register</li>
+					<li>Users can Login using their credentials</li>
+					<li>New Blogpost can be submitted</li>
+					<li>User can edit/delete his posts</li>
+					<li>User can like blogposts</li>
+					<li>User can comment on Blogposts</li>
+					<li>User can delete inappropriate comments made on his/her blogpost</li>
+				</ul>
+			</label> 
+		</div>
+	</div>
+</div>
+{% endblock %}

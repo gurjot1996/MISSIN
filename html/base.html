@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BlogUp</title>
+	<link rel="stylesheet" href="/static/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+</head>
+<body>
+
+		<div class="row" id="header">
+			<div class="col-md-12" ><h1>{{pagetitle}}</h1>
+			</div>
+		</div>
+	<hr>
+		<div> 
+				{% block content %}
+				{% endblock %}
+		</div>	
+	
+
+		<div class="row" id="footer">
+			<div class="col-md-12">
+				<h3>A project by Gurjot Joshi</h3>
+			</div>
+		</div> 
+
+</body>
+</html>
